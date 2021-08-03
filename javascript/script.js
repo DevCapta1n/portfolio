@@ -34,12 +34,9 @@ function animate(context, images) {
 
 function growLoop() {
     [context,imageArray] = animate(context, imageArray);
-    const date = Date.now();
-    let currentDate = null;
-    do {
-        currentDate = Date.now();
-    } while (currentDate - date < 1000);
-    window.requestAnimationFrame(growLoop);
+    setTimeout(function() {
+        window.requestAnimationFrame(growLoop);
+    }, 1000)
 }
 
 let context = displayCanvas();
