@@ -1,0 +1,121 @@
+body {
+    background-color: black;
+}
+/* nav bar styling */
+#main_nav {
+    position: fixed;
+    z-index: 1000;
+}
+
+nav {
+    background-color: transparent;
+    position: absolute;
+    right: 5em;
+    /* margin-right: 5em; */
+}
+
+nav li {
+    padding-left: 4em;
+}
+
+.nav_link {
+    color: white;
+    font-size: 2em;
+    text-decoration: underline 0.15em transparent;
+    text-underline-offset: 0.2em;
+    transition: text-decoration-color 300ms, text-underline-offset 300ms;
+}
+
+.nav_link:hover {
+    cursor: pointer;
+    text-decoration-color: rgba(255, 255, 255, 1);
+}
+/* end nav bar styling */
+
+/* landing styling */
+#landing {
+    background-color: black;
+    padding-top: 6em;
+    height: 100vh;
+}
+
+#container {
+    width: 1200px;
+    height: 800px;
+    margin: 0 auto;
+}
+/* end landing styling */
+
+/* home styling */
+#home {
+    background-color: black;
+    height: 100vh;
+    padding-top: 8em;
+}
+
+.row {
+    width: 100vw;
+}
+
+.card {
+    border: none !important;
+}
+
+.card:hover {
+    border: 5px solid white !important;
+    opacity: 0.66;
+    cursor: pointer;
+}
+
+.col {
+    padding-left: 4em !important;
+    padding-right: 4em !important;
+}
+
+.card-body {
+    margin: 0px;
+    text-align: center;
+    background-color: black;
+}
+
+.card-body span {
+    font-size: 3em;
+    color: white;
+}
+/* end home styling */
+
+/* contact styling */
+#contact {
+    background-color: black;
+    height: 100vh;
+    padding-top: 15em;
+}
+
+#list-div {
+    color: white;
+}
+
+#list-div ul {
+    list-style-type: none;
+    font-size: 3em;
+    text-align: center;
+}
+
+#list-div ul li {
+    margin: 0 auto;
+    width: 15em;
+    border-bottom: 3px solid white;
+}
+
+#list-div ul li a{
+    color: white;
+    text-decoration: underline 0.15em transparent;
+    text-underline-offset: 0.2em;
+    transition: text-decoration-color 300ms, text-underline-offset 300ms;
+}
+
+#list-div ul li a:hover {
+    cursor: pointer;
+    text-decoration-color: rgba(255, 255, 255, 1);
+}
+/* end contact styling */
