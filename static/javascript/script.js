@@ -9,13 +9,13 @@ const fifth = new Image();
 const sixth = new Image();
 const seventh = new Image();
 
-first.src = "images/shroomAniBase.png";
-second.src = "images/shroomAni1.png";
-third.src = "images/shroomAni2.png";
-fourth.src = "images/shroomAni3primordium.png";
-fifth.src = "images/shroomAni4.png";
-sixth.src = "images/shroomAni5.png";
-seventh.src = "images/shroomAni6.png";
+first.src = "/static/images/shroomAniBase.png";
+second.src = "/static/images/shroomAni1.png";
+third.src = "/static/images/shroomAni2.png";
+fourth.src = "/static/images/shroomAni3primordium.png";
+fifth.src = "/static/images/shroomAni4.png";
+sixth.src = "/static/images/shroomAni5.png";
+seventh.src = "/static/images/shroomAni6.png";
 
 function displayCanvas() {
     let map = document.getElementById("animation");
@@ -33,13 +33,13 @@ function animate(context, images) {
 }
 
 function growLoop() {
-    [context,imageArray] = animate(context, imageArray);
+    [canvas,imageArray] = animate(canvas, imageArray);
     setTimeout(function() {
         window.requestAnimationFrame(growLoop);
     }, 1000)
 }
 
-let context = displayCanvas();
+let canvas = displayCanvas();
 let imageArray = [first, second, third, fourth, fifth, sixth, seventh]
 
 window.addEventListener('load', function() {

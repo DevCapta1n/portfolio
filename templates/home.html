@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Winford</title>
+    <link rel="shortcut icon" type="image/jpg" href="/static/images/portfolioFavicon.ico"/>
     <script src="https://unpkg.com/jquery"></script>
-    <link rel="stylesheet" href="styling/style.css">
+    <link rel="stylesheet" href="/static/styling/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 </head>
 <body>
@@ -36,7 +37,7 @@
                     <div class="card-body">
                         <span class="card-title">Statify</span>
                     </div>
-                    <img src="images/StatifyScreenShot.png" class="card-img-bottom" alt="Statify Screenshot">
+                    <img src="/static/images/StatifyScreenShot.png" class="card-img-bottom" alt="Statify Screenshot">
                 </div>
             </div>
             <div class="col">
@@ -44,7 +45,7 @@
                     <div class="card-body">
                         <span class="card-title">Resume</span>
                     </div>
-                    <img src="images/ResumeScreenShot.png" class="card-img-bottom" alt="Resume Screenshot">
+                    <img src="/static/images/ResumeScreenShot.png" class="card-img-bottom" alt="Resume Screenshot">
                 </div>
             </div>
             <div class="col">
@@ -52,7 +53,7 @@
                     <div class="card-body">
                         <span class="card-title">Vivien Versus Viruses</span>
                     </div>
-                    <img src="images/VVVScreenShot.png" class="card-img-bottom" alt="Vivien Versus Viruses Screenshot">
+                    <img src="/static/images/VVVScreenShot.png" class="card-img-bottom" alt="Vivien Versus Viruses Screenshot">
                 </div>
             </div>
         </div>
@@ -64,9 +65,16 @@
                 <li><a href="https://www.linkedin.com/in/jack-winford-0a12b5203/" target="_blank">LinkedIn</a></li>
                 <li><a href="https://github.com/jackWinford42" target="_blank">Github</a></li>
             </ul>
+            <form method="POST" action="/">
+                <label for="mail">Your Email:</label>
+                <input type="text" name="mail">
+                <label for="content">Content:</label>
+                <input type="text" name="content" size="150">
+                <button>Send</button>
+            </form>
         </div>
     </div>
 </body>
 <!-- <script src="https://unpkg.com/axios/dist/axios.js"></script> -->
-<script src="javascript/script.js"></script>
+<script src="/static/javascript/script.js"></script>
 </html>
