@@ -1,6 +1,10 @@
 body {
     background-color: black;
 }
+
+u {
+    text-decoration-color:#B75CFF;
+}
 /* nav bar styling */
 #main_nav {
     position: fixed;
@@ -10,12 +14,12 @@ body {
 nav {
     background-color: transparent;
     position: absolute;
-    right: 5em;
+    right: 4vw;
     /* margin-right: 5em; */
 }
 
 nav li {
-    padding-left: 4em;
+    padding-left: 3vw;
 }
 
 .nav_link {
@@ -28,7 +32,7 @@ nav li {
 
 .nav_link:hover {
     cursor: pointer;
-    text-decoration-color: rgba(255, 255, 255, 1);
+    text-decoration-color: #B75CFF;
 }
 /* end nav bar styling */
 
@@ -40,9 +44,14 @@ nav li {
 }
 
 #container {
-    width: 1200px;
-    height: 800px;
+    width: 63vw;
+    height: 42vw;
     margin: 0 auto;
+}
+
+#container canvas {
+    width: 63vw;
+    height: 42vw;
 }
 /* end landing styling */
 
@@ -53,36 +62,128 @@ nav li {
     padding-top: 8em;
 }
 
+#home-row {
+    max-height: 100vh;
+    max-width: 95vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
 .row {
     width: 100vw;
+    padding: 0 !important;
+    margin: 0 !important;
+    /* padding: 0 !important;
+    margin: 0 !important; */
 }
 
 .card {
+    /* padding: 0 !important; */
+    /* margin: 0; */
     border: none !important;
 }
 
-.card:hover {
-    border: 5px solid white !important;
+.row-col {
+    /* padding-right: 0 !important;
+    padding-left: 0 !important; */
+    margin: 0;
+}
+
+.card .card-img-bottom:hover {
+    border: 5px solid #B75CFF !important;
     opacity: 0.66;
     cursor: pointer;
 }
 
-.col {
-    padding-left: 4em !important;
-    padding-right: 4em !important;
+.card-title {
+    position: absolute;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    left: 0;
+    bottom: 0;
+}
+
+.card-body img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }
 
 .card-body {
     margin: 0px;
+    position: relative;
     text-align: center;
     background-color: black;
 }
 
 .card-body span {
-    font-size: 3em;
+    float: left;
+    font-size: 3vw;
     color: white;
 }
+
+.github {
+    width: 2.25vw;
+    height: 2.25vw;
+}
+
+.github:hover {
+    content: url("/static/images/github-brands-violet.png");
+    cursor: pointer;
+}
 /* end home styling */
+
+/* about page styling */
+#about {
+    background-color: black;
+    height: 100vh;
+    padding-top: 7em;
+    flex-wrap: nowrap;
+}
+
+#about-title {
+    font-size: 4em;
+    color: white;
+}
+
+#about-bio {
+    font-size: 2em;
+    color: white;
+}
+
+#tech-title {
+    color: white;
+    font-size: 3em;
+}
+
+.tech-example {
+    color: white;
+    font-size: 2em;
+}
+
+#left-about {
+    margin-left: 5vw;
+    width: 45vw;
+    float: left;
+}
+
+#right-about {
+    padding-left: 5vw;
+    margin-top: 5em;
+    width: 45vw;
+    float: right;
+}
+
+#portrait {
+    width: 500px;
+    border: 5px solid white;
+    margin: 0 auto;
+}
+
+#portrait:hover {
+    border: 5px solid #B75CFF;
+}
+/* end about page styling */
 
 /* contact styling */
 #contact {
@@ -116,6 +217,85 @@ nav li {
 
 #list-div ul li a:hover {
     cursor: pointer;
-    text-decoration-color: rgba(255, 255, 255, 1);
+    text-decoration-color: #B75CFF;
+}
+
+#contact-title {
+    text-align: center;
+    color: white;
+    font-size: 2em;
+}
+
+#email-help {
+    color: white;
+}
+
+#content {
+    height: 6em;
+}
+
+#contact form {
+    width: 33vw;
+    margin: 0 auto;
 }
 /* end contact styling */
+
+@media only screen and (max-width: 1330px) {
+    /* about page styling */
+    #about-title {
+        font-size: 2em;
+    }
+    #about-bio, .tech-example {
+        font-size: 1em;
+    }
+    #tech-title {
+        font-size: 1.5em;
+    }
+    #portrait {
+        width: 250px;
+    }
+    /* end about page styling */
+}
+
+@media only screen and (max-width: 770px) {
+    /*bio styling*/
+    #about {
+        padding-top: 2em;
+        position: relative;
+    }
+
+    #right-about {
+        position: absolute;
+        top: 0;
+        width: 100vw;
+        margin: 0 auto;
+    }
+
+    #portrait {
+        width: 80vw;
+    }
+
+    #left-about {
+        position: absolute;
+        bottom: 0;
+        width: 100vw;
+        margin: 0 auto;
+    }
+    /* end bio styling*/
+    /* home page styling */
+    #home {
+        padding-top: 2em;
+    }
+    /* end home page styling */
+    /* contact styling*/
+    #list-div ul li {
+        width: 80vw;
+    }
+    #list-div ul {
+        font-size: 1.5em;
+    }
+    #contact form {
+        width: 80vw;
+    }
+    /* end contact styling */
+}

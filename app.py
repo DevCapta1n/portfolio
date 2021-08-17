@@ -18,10 +18,12 @@ mail = Mail(app)
 @app.route("/", methods=["POST", "GET"])
 def display_home():
     if request.method == "POST":
+        print("checkpoint")
         msg = Message(
                     subject="From Portfolio Site",
-                    body=request.form['content'],
+                    body=request.form['content'] + " From: " + request.form['mail'],
                     sender="jackwinford@gmail.com",
                     recipients=["jackwinford@gmail.com"])
         mail.send(msg)
+    print("at root and running")
     return render_template("home.html")

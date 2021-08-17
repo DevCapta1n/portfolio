@@ -7,18 +7,18 @@
     <link rel="shortcut icon" type="image/jpg" href="/static/images/portfolioFavicon.ico"/>
     <script src="https://unpkg.com/jquery"></script>
     <link rel="stylesheet" href="/static/styling/style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
-    <nav class="navbar navbar-expand" id="main_nav">
-        <div class="container-fluid">
-            <ul class="nav navbar-nav">
+    <nav class="navbar navbar-expand flex-nowrap" id="main_nav">
+        <div class="container-fluid flex-nowrap">
+            <ul class="nav navbar-nav flex-nowrap">
                 <li>
-                    <span class="nav_link" id="home-link">Home</span>
+                    <span class="nav_link" id="home-link">Projects</span>
                 </li>
-                <!-- <li>
-                    <span class="nav_link" id="/about-link">About</span>
-                </li> -->
+                <li>
+                    <span class="nav_link" id="about-link">About</span>
+                </li>
                 <li>
                     <span class="nav_link" id="contact-link">Contact</span>
                 </li>
@@ -31,16 +31,8 @@
         </div>
     </div>
     <div id="home">
-        <div class="row flex-nowrap">
-            <div class="col">
-                <div class="card" id="statify">
-                    <div class="card-body">
-                        <span class="card-title">Statify</span>
-                    </div>
-                    <img src="/static/images/StatifyScreenShot.png" class="card-img-bottom" alt="Statify Screenshot">
-                </div>
-            </div>
-            <div class="col">
+        <div class="row" id="home-row">
+            <div class="col row-col">
                 <div class="card" id="resume">
                     <div class="card-body">
                         <span class="card-title">Resume</span>
@@ -48,14 +40,60 @@
                     <img src="/static/images/ResumeScreenShot.png" class="card-img-bottom" alt="Resume Screenshot">
                 </div>
             </div>
-            <div class="col">
+            <div class="col row-col">
+                <div class="card" id="statify">
+                    <div class="card-body">
+                        <span class="card-title">Statify</span>
+                        <a href="">
+                            <img src="/static/images/github-brands.png" class="github" alt="github icon">
+                        </a>
+                    </div>
+                    <img src="/static/images/StatifyScreenShot.png" class="card-img-bottom" alt="Statify Screenshot">
+                </div>
+            </div>
+            <div class="col row-col">
                 <div class="card" id="VVV">
                     <div class="card-body">
-                        <span class="card-title">Vivien Versus Viruses</span>
+                        <span class="card-title">Viv vs Viruses</span>
+                        <img src="/static/images/github-brands.png" class="github" alt="github icon">
                     </div>
                     <img src="/static/images/VVVScreenShot.png" class="card-img-bottom" alt="Vivien Versus Viruses Screenshot">
                 </div>
             </div>
+            <div class="col row-col">
+                <div class="card" id="BF">
+                    <div class="card-body">
+                        <span class="card-title">Beaut. Freaks</span>
+                        <a href="https://github.com/jackWinford42/bandSite-102" target="_blank">
+                            <img src="/static/images/github-brands.png" class="github" alt="github icon">
+                        </a>
+                    </div>
+                    <img src="/static/images/beautifulFreaks.jpg" class="card-img-bottom" alt="Beautiful Freaks Screenshot">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <div id="left-about">
+            <span id="about-title">About Me:</span><br>
+            <span id="about-bio">
+                I specialize in creating <u>elegant and capable software</u>.
+                My development journey began by <u>teaching myself Python</u> before I started college.
+                Fast forward to today, I have completed <u>multiple large software projects</u> and I am about to complete SpringBoard's <u>Software Engineering Course</u>.
+                Outside of my work I like to explore the outdoors via hiking, backpacking, skiing, and more.<br>
+                Please <u>contact me</u> if you have any questions and feel free to checkout my Github and LinkedIn, both linked <u>below</u>.<br>
+            </span>
+            <div id="tech-list">
+                <span id="tech-title">Technologies I've been using recently:</span>
+                <ul>
+                    <li class="tech-example">ReactJs</li>
+                    <li class="tech-example">Node Express</li>
+                    <li class="tech-example">Flask</li>
+                </ul>
+            </div>
+        </div>
+        <div id="right-about">
+            <img src="/static/images/IMG_6183.jpg" alt="portrait image" id="portrait">
         </div>
     </div>
     <div id="contact">
@@ -65,16 +103,21 @@
                 <li><a href="https://www.linkedin.com/in/jack-winford-0a12b5203/" target="_blank">LinkedIn</a></li>
                 <li><a href="https://github.com/jackWinford42" target="_blank">Github</a></li>
             </ul>
-            <form method="POST" action="/">
-                <label for="mail">Your Email:</label>
-                <input type="text" name="mail">
-                <label for="content">Content:</label>
-                <input type="text" name="content" size="150">
-                <button>Send</button>
-            </form>
         </div>
+        <form method="POST" action="/">
+            <span id="contact-title">Contact me directly:</span>
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control" placeholder="Email Address" id="mail">
+                <label for="mail" class="form-label">Email Address</label>
+                <div id="email-help" class="form-text">an email so I can get back to you (optional)</div>
+            </div>
+            <div class="form-floating mb-3">
+                <textarea type="text" size="300" class="form-control" placeholder="Content" id="content"></textarea>
+                <label for="content" class="form-label">Content</label>
+            </div>
+            <button class="btn btn-light">Send</button>
+        </form>
     </div>
 </body>
-<!-- <script src="https://unpkg.com/axios/dist/axios.js"></script> -->
 <script src="/static/javascript/script.js"></script>
 </html>

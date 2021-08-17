@@ -47,38 +47,50 @@ window.addEventListener('load', function() {
     growLoop()
 });
 
-$("#statify").on("click", function() {
+$("#statify .card-img-bottom").on("click", function() {
     let stats = window.open('https://statify-winford.herokuapp.com/', '_blank');
     if (stats) {
         //Browser has allowed it to be opened
         stats.focus();
     } else {
         //Browser has blocked it
-        alert('Please allow popups for this website');
+        alert('Please allow popups for my website');
     }
 })
 
-$("#resume").on("click", function() {
+$("#resume img").on("click", function() {
     let resume = window.open('https://resume.creddle.io/resume/egjofvsdlw6', '_blank');
     if (resume) {
         //Browser has allowed it to be opened
         resume.focus();
     } else {
         //Browser has blocked it
-        alert('Please allow popups for this website');
+        alert('Please allow popups for my website');
     }
 })
 
-$("#VVV").on("click", function() {
+$("#VVV .card-img-bottom").on("click", function() {
     let vvv = window.open('https://jackwinford42.github.io/Vivien-Versus-Viruses/vivien.html', '_blank');
     if (vvv) {
         //Browser has allowed it to be opened
         vvv.focus();
     } else {
         //Browser has blocked it
-        alert('Please allow popups for this website');
+        alert('Please allow popups for my website');
     }
 })
+
+$("#BF .card-img-bottom").on("click", function() {
+    let vvv = window.open('https://jackwinford42.github.io/bandSite-102/', '_blank');
+    if (vvv) {
+        //Browser has allowed it to be opened
+        vvv.focus();
+    } else {
+        //Browser has blocked it
+        alert('Please allow popups for my website');
+    }
+})
+
 
 $("#home-link").on("click", function() {
     document.getElementById("home").scrollIntoView({behavior: "smooth"});
@@ -88,3 +100,6 @@ $("#contact-link").on("click", function() {
     document.getElementById("contact").scrollIntoView({behavior: "smooth"});
 })
 
+$("#about-link").on("click", function() {
+    document.getElementById("about").scrollIntoView({behavior: "smooth"});
+})
