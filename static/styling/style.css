@@ -32,26 +32,26 @@ nav li {
 
 .nav_link:hover {
     cursor: pointer;
-    text-decoration-color: #B75CFF;
+            text-decoration-color: #B75CFF;
 }
 /* end nav bar styling */
 
 /* landing styling */
 #landing {
-    background-color: black;
-    padding-top: 6em;
-    height: 100vh;
+  background-color: black;
+  padding-top: 6em;
+height: 100vh;
 }
 
 #container {
-    width: 63vw;
-    height: 42vw;
-    margin: 0 auto;
+width: 63vw;
+height: 42vw;
+margin: 0 auto;
 }
 
 #container canvas {
-    width: 63vw;
-    height: 42vw;
+width: 63vw;
+height: 42vw;
 }
 /* end landing styling */
 
@@ -59,18 +59,18 @@ nav li {
 #home {
     background-color: black;
     height: 100vh;
-    padding-top: 8em;
+    padding-top: 12em;
 }
 
 #home-row {
-    max-height: 100vh;
+  /*max-height: 100vh;
     max-width: 95vw;
     margin-left: 5vw;
-    margin-right: 5vw;
+    margin-right: 5vw;*/
 }
 
 .row {
-    width: 100vw;
+    /* width: 100vw;
     padding: 0 !important;
     margin: 0 !important;
     /* padding: 0 !important;
@@ -97,10 +97,9 @@ nav li {
 
 .card-title {
     position: absolute;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
+    padding-bottom: 0;
     left: 0;
-    bottom: 0;
+    bottom: -10px;
 }
 
 .card-body img {
@@ -112,13 +111,13 @@ nav li {
 .card-body {
     margin: 0px;
     position: relative;
-    text-align: center;
     background-color: black;
+    height: 3.3em;
 }
 
 .card-body span {
     float: left;
-    font-size: 3vw;
+    font-size: 3em;
     color: white;
 }
 
